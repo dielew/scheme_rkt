@@ -5,5 +5,14 @@ Fib(n) = (Phi^n - Psi^n) / (sqrt 5).
 First of all, if saying fib(n) is the closest integer to (Phi^n) / (sqrt 5), means that abs( fib(n) - ( (Phi^n) / (sqrt 5) ) ) <= 1/2,
 then we have abs( Psi^n ) <= (sqrt 5) / 2 need to be proved,
 When we can prove abs(Psi) <= 1 and n >= 0 (ofcause it is), we get abs(Psi^n) <= 1.
-due to easily result of  1 < (sqrt 5) / 2, we get abs(Psi^n) < (sqrt 5) / 2.
+due to easily result of  1 <= (sqrt 5) / 2, we get abs(Psi^n) <= (sqrt 5) / 2.
 until now, what we have to do is proving that abs(Psi) <= 1 and the hint equation. 
+
+so, why abs(Psi) <= 1 ? 
+because that 1 = abs( (1 - (sqrt 9)) / 2 ) or abs( ((sqrt 9) - 1) /2  ),
+abs(Psi) < 1
+
+why is  hint equation right.
+due to character of fib(), we can get an eauation: fib(n + 1) = fib(n) + fib(n - 1)
+we need to prove that, (Phi^(n + 1) - Psi^(n + 1)) / (sqrt 5) = (Phi^n - Psi^n) / (sqrt 5) + (Phi^(n - 1) - Psi^(n - 1)) / (sqrt 5)
+if the equation above is right, we can have the hint equation proved.
